@@ -1,0 +1,81 @@
+$bgcolor: rgba(242, 151, 36, 1);
+nav{
+  z-index: 100;
+}
+// Menu for Small Screens
+.Menu {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+// Side Navbar
+.sideNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  .sideNavContent {
+    height: 100%;
+    overflow-y: auto;
+
+    .logo {
+      width: 240px;
+    }
+
+    .navList {
+      list-style: none;
+      padding: 0;
+
+      .active {
+        li {
+          background-color: $bgcolor;
+          color: #fff;
+          box-shadow: 1px 17px 15px -15px rgba(242, 151, 36, 0.75);
+        }
+      }
+
+      li {
+        &:hover {
+          transform: scale(105%);
+          box-shadow: none;
+        }
+        transition: transform 0.4s;
+        margin: 1rem 0;
+        padding: 0.7rem;
+        border-radius: 15px;
+        color: black;
+
+        i {
+          margin: 0 10px;
+        }
+
+        span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    transform: translateX(-100%);
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}

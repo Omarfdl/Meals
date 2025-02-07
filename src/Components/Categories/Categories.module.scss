@@ -1,0 +1,56 @@
+.categoriesContainer {
+  width: 100%;
+  margin-left: 5px;
+
+  .selectMenu {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    .active div {
+      background-color: #000;
+      color: #fff !important;
+      transition: background-color 0.5s;
+    }
+
+    .category {
+      color: gray;
+      border: solid 1px gray;
+      border-radius: 20px;
+      padding: 7px 10px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.5s;
+
+      &:hover {
+        color: #3f3f3f;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .selectMenu {
+      display: block;
+    }
+
+    .row {
+      display: none;
+    }
+  }
+}

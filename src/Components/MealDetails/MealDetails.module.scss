@@ -1,0 +1,175 @@
+$scale: scale(105%);
+$transition: all 0.4s;
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin organizedLines {
+  width: 90%;
+  text-align: justify;
+  text-align-last: left;
+  padding-left: 0px;
+  padding-right: 10px;
+  margin-top: 0.2rem;
+  margin-right: 1rem;
+}
+
+section {
+  .mealName {
+    font-family: "Pacifico", cursive;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .Meal {
+    .mealContent {
+      @include flex;
+      gap: 50px;
+      padding: 20px;
+
+      .mealImg {
+        width: 260px;
+        border-radius: 15px;
+      }
+
+      .ingredients {
+        padding: 10px 20px;
+        background-color: #ffffff;
+        margin: 2rem 0;
+        h2 {
+          border-bottom: solid rgba(184, 184, 184, 0.822) 3px;
+          padding-bottom: 10px;
+        }
+      }
+
+      a {
+        font-size: 15px;
+        color: #ffffff;
+        font-weight: 600;
+
+        i {
+          font-size: 15px;
+          margin-right: 10px;
+        }
+
+        button {
+          padding: 10px 20px;
+          border-radius: 10px;
+          color: #ffffff;
+          border: none;
+          margin: 0 5px;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+
+      .mealBtns {
+        @include flex;
+        gap: 10px;
+      }
+
+      .mealDesc {
+        @include organizedLines;
+      }
+
+      .mealDetails {
+        margin: 0.8rem 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid rgba(184, 184, 184, 0.822) 1px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  section {
+    .mealName {
+      font-size: 2.5rem;
+    }
+
+    .Meal {
+      .mealContent {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        align-items: center;
+
+        .ingredients {
+          @include flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .mealImg {
+          width: 100%;
+          max-width: 420px;
+        }
+
+        .mealDesc {
+          @include organizedLines;
+          margin: 0;
+          padding: 10px;
+        }
+
+        .mealDetails {
+          width: 90%;
+          text-align: center;
+        }
+
+        .mealBtns {
+          flex-direction: row;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    .mealName {
+      font-size: 3rem;
+    }
+
+    .Meal {
+      .mealContent {
+        gap: 50px;
+        padding: 20px;
+
+        .mealDesc {
+          width: 65%;
+          text-align: justify;
+        }
+
+        .mealDetails {
+          flex-direction: row;
+          gap: 15px;
+        }
+      }
+    }
+  }
+}
+
+.sourceBtn {
+  &:hover {
+    background-color: #288466;
+    transform: $scale;
+  }
+  background-color: #21ba75;
+  transition: $transition;
+}
+
+.youtubeBtn {
+  &:hover {
+    background-color: #8a2829;
+    transform: $scale;
+  }
+  background-color: #dc2626;
+  transition: $transition;
+}

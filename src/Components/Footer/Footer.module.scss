@@ -1,0 +1,37 @@
+footer {
+  z-index: 99999;
+  background-color: #ffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+
+  .footerN {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: black;
+    }
+    .route {
+      span {
+        color: #1d4ed8;
+      }
+    }
+    img {
+      width: 50px;
+    }
+  }
+
+  .rights {
+    text-align: center;
+    span {
+      font-size: 0.8rem;
+      color: rgb(145, 145, 145);
+      font-weight: 300;
+    }
+  }
+}

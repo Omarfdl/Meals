@@ -1,0 +1,13 @@
+.mainContent {
+  margin-left: 17rem;
+}
+
+.footer {
+  margin: 7rem 0;
+}
+
+@media (max-width: 767px) {
+  .mainContent {
+    margin-left: 0;
+  }
+}
