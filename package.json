@@ -2,7 +2,7 @@
   "name": "meals",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Omarfdl.github.io/React-Meals-Api",
+  "homepage": "https://Omarfdl.github.io/Meals",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
